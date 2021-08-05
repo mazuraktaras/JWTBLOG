@@ -307,7 +307,6 @@ class PostRating(Resource):
                 post.dislikes = Post.dislikes - 1
                 # update post
                 post.update()
-                # return response
                 return {'msg': 'Rating updated to indifferent'}
 
             # If the post has never been 'dislikes' rated by current user
