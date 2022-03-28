@@ -6,8 +6,8 @@ LABEL version="0.0.1b"
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV FLASK_APP "blog.py"
-# ENV FLASK_ENV "development"
-ENV FLASK_DEBUG False
+ENV FLASK_ENV "development"
+ENV FLASK_DEBUG True
 # ENV C_FORCE_ROOT true
 
 RUN mkdir /jwtblog
@@ -20,5 +20,5 @@ RUN pip install -r requirements.txt
 
 ADD . /jwtblog
 
-EXPOSE 5000
-CMD flask run --host=0.0.0.0
+EXPOSE 5007
+CMD flask run --host=0.0.0.0 --port=5007

@@ -36,9 +36,9 @@ class BlogBot:
                                                                        lower_case=True)
             # send post request to API signup endpoint and create the new user and obtain the token
             payload = {'username': username, 'password': password}
-            requests.post('http://127.0.0.1:5000/api/signup', data=payload)
+            requests.post('http://127.0.0.1:5007/api/signup', data=payload)
             # send post request to API login endpoint and and obtain the token
-            response = requests.post('http://127.0.0.1:5000/api/login', data=payload)
+            response = requests.post('http://127.0.0.1:5007/api/login', data=payload)
             token = response.json()['token']
             headers = {'Authorization': f'Bearer {token}'}
             # loop of random number of posts
@@ -47,19 +47,19 @@ class BlogBot:
                 post_text = self.fake.text(max_nb_chars=200, ext_word_list=None)
                 # send post
                 payload = {'post_text': post_text}
-                requests.post('http://127.0.0.1:5000/api/posts', headers=headers, data=payload)
+                requests.post('http://127.0.0.1:5007/api/posts', headers=headers, data=payload)
             # loop of random number of likes
             for _ in range(randint(1, self.max_likes_per_user)):
                 # get possible post's ids
-                response = requests.get('http://127.0.0.1:5000/api/posts', headers=headers)
+                response = requests.get('http://127.0.0.1:5007/api/posts', headers=headers)
                 posts = response.json()['posts']
                 post_ids = [post['post_id'] for post in posts]
                 # randomly assign post id
                 payload = {'post_id': choice(post_ids), 'like': 1}
                 # send like rating
-                requests.post('http://127.0.0.1:5000/api/rating', headers=headers, data=payload)
+                requests.post('http://127.0.0.1:5007/api/rating', headers=headers, data=payload)
             # logout user
-            requests.post('http://127.0.0.1:5000/api/logout', headers=headers)
+            requests.post('http://127.0.0.1:5007/api/logout', headers=headers)
 
     def background_run(self):
         """
@@ -72,9 +72,4 @@ class BlogBot:
 
 
 if __name__ == '__main__':
-    lst1 = [1, 2, 3, ]
-    lst2 = [4, 5, 6, ]
-    print(lst1 + lst2)
-    zp = zip(lst1, lst2)
-    print([k for k in zp].extend(lst1))
-    print()
+    ...

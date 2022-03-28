@@ -11,6 +11,8 @@ JWT_CSRF_CHECK_FORM = False
 JWT_ACCESS_TOKEN_EXPIRES = 3600
 PROPAGATE_EXCEPTIONS = True
 
+# SERVER_NAME = 'our_server.com:5001'
+
 # ----- Blog Bot configuration section -----
 BOT_NUMBER_OF_USERS = 3
 BOT_MAX_POSTS_PER_USER = 1

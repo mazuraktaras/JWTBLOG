@@ -222,4 +222,9 @@ def bot():
     flash('Bot started', 'success')
     # redirect to the origin location
     return redirect(request.referrer)
-#
+
+
+@app.route('/test')
+def test():
+    print(app.config['SERVER_NAME'], flush=True)
+    return url_for('test', _external=True)
