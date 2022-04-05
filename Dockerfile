@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.7-slim
 
 LABEL Author="Taras Mazurak"
 LABEL E-mail="xperia.t.mazurak@gmail.com"

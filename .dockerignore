@@ -1,6 +1,7 @@
-/.idea/
-/venv/
+.idea/
+venv/
 .gitignore
 # Elastic Beanstalk Files
+# .elasticbeanstalk/*
 .elasticbeanstalk/*
-.git
+
