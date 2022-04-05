@@ -3,5 +3,5 @@ venv/
 .gitignore
 # Elastic Beanstalk Files
 # .elasticbeanstalk/*
-.elasticbeanstalk/*
+.elasticbeanstalk/
 
