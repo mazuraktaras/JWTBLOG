@@ -1,6 +1,6 @@
 version: "3.7"
 services:
   web:
-    build: .
+    build: ../..
     ports:
-      - "8080:5007"
+      - "5007:5007"

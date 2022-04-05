@@ -20,5 +20,5 @@ RUN pip install -r requirements.txt
 
 ADD . /jwtblog
 
-EXPOSE 5007
-CMD flask run --host=0.0.0.0 --port=5007
+EXPOSE 5000
+CMD flask run --host=0.0.0.0 --port=5000
