@@ -1,4 +1,6 @@
 # ----- App configuration section -----
+PREFERRED_URL_SCHEME = 'http'
+
 SECRET_KEY = '222bmnkvsk777'
 SQLALCHEMY_DATABASE_URI = 'sqlite:///jwtblog.db'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
