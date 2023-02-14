@@ -1,6 +1,6 @@
 from datetime import datetime
 from flask_restful import Resource, reqparse
-from .models import User, RevokedToken, Post, Rating
+from jwtblogapp.models import User, RevokedToken, Post, Rating
 from sqlalchemy.exc import IntegrityError
 from jwtblogapp import jwt
 from flask_jwt_extended import jwt_required, create_access_token, get_raw_jwt, get_jwt_identity
