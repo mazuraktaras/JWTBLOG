@@ -1,8 +1,8 @@
 /.idea/
 /venv/
 
-
-
+# Custom
+/jwtblogapp/jwtblog.db
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
